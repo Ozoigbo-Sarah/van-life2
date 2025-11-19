@@ -1,0 +1,210 @@
+/* Full-page center alignment */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff7f0; /* matches your background */
+}
+
+/* Card box */
+.login-box {
+  background: #fff7f0; /* same background color */
+ padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Title */
+.login-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+/* Form fields */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-input {
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.login-input:focus {
+  border-color: #f97316; /* orange highlight */
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+}
+
+/* Button */
+.login-btn {
+  background-color: #f97316; /* bright orange */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #ea580c; /* darker orange */
+}
+
+/* Footer text */
+.login-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.login-link {
+  color: #f97316;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+.host-income {
+    padding-inline: 26px;
+    color: #161616;
+}
+
+.host-income > p {
+    color: #4d4d4d;
+}
+
+.host-income > p span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.host-income > h2 {
+    font-size: 38px;
+    color: #161616;
+    font-weight: 900;
+}
+
+img.graph {
+    width: 100%;
+    max-width: 500px;
+}
+
+.host-income .info-header > p {
+    color: #4d4d4d;
+}
+
+.host-income .info-header > p span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.host-income .info-header > h3 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 60px;
+}
+
+.host-income .transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 31px;
+    padding: 35px 29px;
+    border-radius: 6px;
+}
+.host-income .transaction > h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.host-income .transaction > p {
+    font-weight: 500;
+    font-size: 20px;
+    color: #4d4d4d;
+}
+.host-dashboard-earnings {
+    background-color: #ffead0;
+    padding: 37px 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.host-dashboard-earnings > .info > h1 {
+    font-size: 36px;
+    color: #161616;
+    margin: 0;
+}
+
+.host-dashboard-earnings > .info > p {
+    color: #4d4d4d;
+}
+
+.host-dashboard-earnings > .info > p > span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.host-dashboard-earnings > .info > h2 {
+    margin: 0;
+    font-size: 38px;
+    color: #161616;
+    font-weight: 900;
+}
+
+.host-dashboard-reviews {
+    background-color: #ffddb2;
+    padding: 25px 26px;
+    display: flex;
+    align-items: center;
+}
+
+.host-dashboard-reviews > h2 {
+    margin: 0;
+}
+
+.host-dashboard-reviews .star {
+    color: #ff8c38;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+.host-dashboard-reviews p {
+    margin-left: 5px;
+    font-size: 20px;
+    color: #4d4d4d;
+    margin-right: auto;
+}
+
+.host-dashboard-reviews p > span {
+    font-weight: bold;
+    color: #161616;
+}
+
+.host-dashboard-vans {
+    padding: 38px 26px;
+}
+
+.host-dashboard-vans > .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.host-dashboard-vans .host-vans-list {
+    padding-inline: 0;
+}
