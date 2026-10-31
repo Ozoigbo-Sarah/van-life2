@@ -112,7 +112,9 @@ const router = createBrowserRouter(
       </Route>
       <Route path="*" element={<NotFound />} />
     </Route>
-  )
+  ),
+  // The site lives under /van-life2/ on GitHub Pages, so every route needs that prefix
+  { basename: import.meta.env.BASE_URL }
 );
 
 
