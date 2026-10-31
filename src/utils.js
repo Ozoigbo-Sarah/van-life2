@@ -20,6 +20,19 @@ export async function requireAuth(request) {
 
 import { redirect } from "react-router-dom"
 
+// Mirage swaps in a fetch polyfill whose Response has no `body`, so React Router
+// doesn't recognise redirects unless `body` is set. A real browser Response has a
+// read-only `body`, so setting it must be guarded or it throws.
+export function safeRedirect(url) {
+  const response = redirect(url)
+  try {
+    response.body = true
+  } catch {
+    // native Response: already recognised by React Router, nothing to do
+  }
+  return response
+}
+
 export async function requireAuth(request) {
   // 🧠 Add a base origin to support relative URLs in dev
   const url = new URL(request.url, window.location.origin)
@@ -27,11 +40,9 @@ export async function requireAuth(request) {
   const isLoggedIn = localStorage.getItem("loggedin")
 
   if (!isLoggedIn) {
-    const response = redirect(
+    throw safeRedirect(
       `/login?message=You must log in to access that page.&redirectTo=${pathname}`
     )
-    response.body = true
-    throw response
   }
 
   return null

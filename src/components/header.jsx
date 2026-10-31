@@ -24,15 +24,15 @@ export default function Header() {
         to="/host"
         style={({ isActive }) => (isActive ? activeStyle : null)}
         >Host</NavLink>
-        <Link
+        <NavLink
         to="/login"
         className="login-link"
         style={({ isActive }) => (isActive ? activeStyle : null)}
-        >log in</Link>
-        <Link
+        >log in</NavLink>
+        <NavLink
         to="/logout"
         style={({ isActive }) => (isActive ? activeStyle : null)}
-        >log out</Link>
+        >log out</NavLink>
       </nav>
     </header>
   );

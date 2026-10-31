@@ -2,10 +2,10 @@
 import { useLoaderData ,
     useNavigation, 
     Form,
-    useActionData,
-    redirect
+    useActionData
 } from "react-router-dom"
 import { loginUser } from "../Api"
+import { safeRedirect } from "../utils"
 
 export function Loader({ request }) {
     return new URL(request.url).searchParams.get("message")
@@ -20,9 +20,7 @@ export async function Action({ request }) {
    try{ const data = await loginUser({ email, password })
     localStorage.setItem("loggedin", true)
     //window.location.href = pathname
-    const response = redirect(pathname)
-response.body = true  // It's silly, but it works
-return response
+    return safeRedirect(pathname)
    } catch (error) {
     console.error("❌ Login failed:", error);
        return { error: "Failed to log in" }
